@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ControlsService } from 'src/app/shared/services/controls.service';
 
 @Component({
   selector: 'app-login-boxed',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LoginBoxedComponent implements OnInit {
 
-  constructor() { }
+  constructor(private controlService: ControlsService) { }
 
   ngOnInit() {
+    
+    //alert('hola');
+  }
+
+  testAlert(){
+    this.controlService.msgSucces('Bienvenido al Login....');
   }
 
 }
